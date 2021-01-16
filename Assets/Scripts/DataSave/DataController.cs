@@ -16,6 +16,7 @@ public class DataController : MonoBehaviour
     }
 
     static DataController _instance;
+    
     public static DataController Instance
     {
         get

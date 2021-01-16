@@ -11,14 +11,18 @@ public class ChatCtrl : MonoBehaviour
     [SerializeField]
     private float TextDelay;
 
+
     private void Start()
     {
-        StartCoroutine(ShowText());
+       
     }
 
     private void Update()
     {
-        
+        if(!this.gameObject.activeInHierarchy)
+        {
+            return;
+        }
     }
 
     private IEnumerator NormalChat(string narrator , string narration)
@@ -38,5 +42,10 @@ public class ChatCtrl : MonoBehaviour
     private IEnumerator ShowText()
     {
         yield return StartCoroutine(NormalChat("대이", "파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴"));
+    }
+
+    public void TouchPanel()
+    {
+        StartCoroutine(ShowText());
     }
 }

@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-   public void TitleScene()
+/*    private void Start()
     {
-        SceneManager.LoadScene("SELECT");
+        SceneManager.LoadScene("TITLE");
+    }*/
+    public void TitleScene()
+    {
+        SceneManager.LoadScene("MAIN");
     }
 }
