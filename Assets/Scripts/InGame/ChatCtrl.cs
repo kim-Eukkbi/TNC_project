@@ -29,6 +29,8 @@ public class ChatCtrl : MonoBehaviour
     private Text characterName;
     [SerializeField]
     private float textDelay;
+    [SerializeField]
+    private float autoDelay;
 
     public List<ChatUnit> listChatLoadText;
     public List<string> chatString;
@@ -36,6 +38,7 @@ public class ChatCtrl : MonoBehaviour
 
     private int chatCount = 0;
     private int countChack = 154;
+    private bool AutoChack = false;
 
     private void Start()
     {
@@ -50,10 +53,58 @@ public class ChatCtrl : MonoBehaviour
         {
             return;
         }
+
+
+        if(AutoChack == true)
+        {
+          /*  if (countChack == chatCount)
+            {
+                return;
+            }
+            else
+            {
+                
+            }*/
+        }
     }
 
+    private void ChatAlgorithm()
+    {
+        countChack = chatCount;
+        characterName.text = characterNameString[chatCount];
+        chatText.text = null;
+    }
+
+    private void AutoChatAlgorithm()
+    {
+        ChatAlgorithm();
+        chatText.DOText(chatString[chatCount], textDelay).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            chatCount++;
+            //Debug.Log("반복" + (chatCount) + "회");
+        });
+    }
+
+    public void Auto()
+    {
+        if (AutoChack == true)
+        {
+            AutoChack = false;
+            Debug.Log("오토 꺼짐");
+            CancelInvoke("AutoChatAlgorithm");
+        }
+        else
+        {
+            AutoChack = true;
+            Debug.Log("오토 켜짐");
+            InvokeRepeating("AutoChatAlgorithm",0, autoDelay);
+        }
+    }
+           
+ 
     public void ShowChat()
     {
+        if(AutoChack == true) { return; }
         if (countChack == chatCount)
         {
             chatText.DOKill(this);
@@ -61,11 +112,10 @@ public class ChatCtrl : MonoBehaviour
             chatText.text = chatString[chatCount-1];
             return;
         }
-        countChack = chatCount;
-        characterName.text = characterNameString[chatCount];
-        chatText.text = null;
-        chatText.DOText(chatString[chatCount], textDelay)/*.SetEase(Ease.Linear)*/.OnComplete(() => { chatCount++; });
+        ChatAlgorithm();
+        chatText.DOText(chatString[chatCount], textDelay).SetEase(Ease.Linear).OnComplete(() => { chatCount++; });
     }
+
     public void ChatLoad()
     {
         byte[] chatJsonLoad = File.ReadAllBytes(Application.streamingAssetsPath + "/Chat/ChatJson.json");
