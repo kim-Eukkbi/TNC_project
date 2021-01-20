@@ -1,20 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using System.Text;
+
+[Serializable]
+public struct ChatUnit
+{
+    public int id;
+    public string name;
+    public string text;
+}
+
+[Serializable]
+public struct ChatList
+{
+   public ChatUnit[] chats;
+}
+
 public class ChatCtrl : MonoBehaviour
 {
     [SerializeField]
-    private Text ChatText;
+    private Text chatText;
     [SerializeField]
-    private Text CharacterName;
+    private Text characterName;
     [SerializeField]
-    private float TextDelay;
+    private float textDelay;
 
+    public List<ChatUnit> listChatLoadText;
+    public List<string> chatString;
+    public List<string> characterNameString;
+
+    private int chatCount = 0;
+    private int countChack = 154;
 
     private void Start()
     {
-       
+        ChatLoad();
+        characterName.text = null;
+        chatText.text = null;
     }
 
     private void Update()
@@ -25,27 +52,32 @@ public class ChatCtrl : MonoBehaviour
         }
     }
 
-    private IEnumerator NormalChat(string narrator , string narration)
+    public void ShowChat()
     {
-        int i = 0;
-        CharacterName.text = narrator;
-        string letter = "";
-
-        for(i =0; i<narration.Length;i++)
+        if (countChack == chatCount)
         {
-            letter += narration[i];
-            ChatText.text = letter;
-            yield return new WaitForSeconds(TextDelay);
+            chatText.DOKill(this);
+            chatText.text = null;
+            chatText.text = chatString[chatCount-1];
+            return;
         }
+        countChack = chatCount;
+        characterName.text = characterNameString[chatCount];
+        chatText.text = null;
+        chatText.DOText(chatString[chatCount], textDelay)/*.SetEase(Ease.Linear)*/.OnComplete(() => { chatCount++; });
     }
-
-    private IEnumerator ShowText()
+    public void ChatLoad()
     {
-        yield return StartCoroutine(NormalChat("대이", "파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴파괴"));
-    }
+        byte[] chatJsonLoad = File.ReadAllBytes(Application.streamingAssetsPath + "/Chat/ChatJson.json");
 
-    public void TouchPanel()
-    {
-        StartCoroutine(ShowText());
+        string chat = Encoding.UTF8.GetString(chatJsonLoad);
+
+        listChatLoadText = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(chat).chats);
+
+        for (int i = 0; i < listChatLoadText.Count; i++)
+        {
+            characterNameString.Add(listChatLoadText[i].name);
+            chatString.Add(listChatLoadText[i].text);
+        }
     }
 }
