@@ -40,11 +40,12 @@ public class ChatCtrl : MonoBehaviour
     private int countChack = 154;
     private bool AutoChack = false;
 
+   
     private void Start()
     {
         ChatLoad();
-        characterName.text = null;
         chatText.text = null;
+        characterName.text = null;
     }
 
     private void Update()
@@ -52,19 +53,6 @@ public class ChatCtrl : MonoBehaviour
         if(!this.gameObject.activeInHierarchy)
         {
             return;
-        }
-
-
-        if(AutoChack == true)
-        {
-          /*  if (countChack == chatCount)
-            {
-                return;
-            }
-            else
-            {
-                
-            }*/
         }
     }
 
@@ -118,11 +106,9 @@ public class ChatCtrl : MonoBehaviour
 
     public void ChatLoad()
     {
-        byte[] chatJsonLoad = File.ReadAllBytes(Application.streamingAssetsPath + "/Chat/ChatJson.json");
+        TextAsset textData = Resources.Load("Json/ChatJson") as TextAsset;
 
-        string chat = Encoding.UTF8.GetString(chatJsonLoad);
-
-        listChatLoadText = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(chat).chats);
+        listChatLoadText = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(textData.ToString()).chats);
 
         for (int i = 0; i < listChatLoadText.Count; i++)
         {

@@ -1150,32 +1150,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1298790877}
-  - component: {fileID: 1298790876}
   m_Layer: 0
   m_Name: SaveCtrl
   m_TagString: SaveController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1298790876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298790875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd144f6ce0a0de4ea39a987e6794acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameDataFileName: StarfishData.json
-  _gameData:
-    isClear2: 0
-    isClear3: 0
-    isClear4: 0
-    isClear5: 0
+  m_IsActive: 0
 --- !u!4 &1298790877
 Transform:
   m_ObjectHideFlags: 0

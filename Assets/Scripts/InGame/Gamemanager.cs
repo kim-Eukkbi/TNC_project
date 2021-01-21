@@ -14,6 +14,8 @@ public class Gamemanager : MonoBehaviour
             SceneManager.LoadScene("TITLE");
         }
     }
+    
+
 
     [SerializeField]
     private GameObject chatPanel;
@@ -22,10 +24,8 @@ public class Gamemanager : MonoBehaviour
 
     private void Start()
     {
-        if(!scelectMain.activeInHierarchy)
-        {
-            chatPanel.SetActive(false);
-            scelectMain.SetActive(true);
-        }
+        chatPanel.SetActive(false);
+        scelectMain.SetActive(true);
+        Screen.SetResolution(1440,2960, true);
     }
 }
