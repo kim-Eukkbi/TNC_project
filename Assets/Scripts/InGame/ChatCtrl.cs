@@ -31,6 +31,8 @@ public class ChatCtrl : MonoBehaviour
     private float textDelay;
     [SerializeField]
     private float autoDelay;
+    [SerializeField]
+    private GameObject opponent;
 
     public List<ChatUnit> listChatLoadText;
     public List<string> chatString;
@@ -46,6 +48,7 @@ public class ChatCtrl : MonoBehaviour
         ChatLoad();
         chatText.text = null;
         characterName.text = null;
+        opponent.SetActive(false);
     }
 
     private void Update()
@@ -92,7 +95,8 @@ public class ChatCtrl : MonoBehaviour
  
     public void ShowChat()
     {
-        if(AutoChack == true) { return; }
+        opponent.SetActive(true);
+        if (AutoChack == true) { return; }
         if (countChack == chatCount)
         {
             chatText.DOKill(this);
