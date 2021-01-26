@@ -26,6 +26,6 @@ public class Gamemanager : MonoBehaviour
     {
         chatPanel.SetActive(false);
         scelectMain.SetActive(true);
-        Screen.SetResolution(1440,2960, true);
+       // Screen.SetResolution(1440,2960, true);
     }
 }
