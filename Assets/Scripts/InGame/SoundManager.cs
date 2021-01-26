@@ -5,13 +5,13 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource backGroundmusic;
-    public AudioSource soundEffect;
+  //  public AudioSource soundEffect;
 
     public void SetbackVolume(float volume)
     {
         backGroundmusic.volume = volume;
     }
-
+ /*
     public void SetSoundVolume(float volume)
     {
         soundEffect.volume = volume;
@@ -21,4 +21,5 @@ public class SoundManager : MonoBehaviour
     {
         soundEffect.Play();
     }
+ */
 }
