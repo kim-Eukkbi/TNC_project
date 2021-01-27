@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        
+        menuPanel.SetActive(false);
     }
 
     public void OnMenu()

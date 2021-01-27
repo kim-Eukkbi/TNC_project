@@ -74,8 +74,8 @@ public class ChatCtrl : MonoBehaviour
     public void ShowChat()
     {
         opponent.SetActive(true);
-        if (isCHOISing == true) { return; }
-        if (AutoChack == true) { return; }
+        if (isCHOISing) { return; }
+        if (AutoChack) { return; }
         if (countChack == chatCount)
         {
             chatText.DOKill(this);
@@ -135,7 +135,7 @@ public class ChatCtrl : MonoBehaviour
     #region 오토
     public void Auto()
     {
-        if (AutoChack == true)
+        if (AutoChack) 
         {
             AutoChack = false;
             Debug.Log("오토 꺼짐");
@@ -157,7 +157,6 @@ public class ChatCtrl : MonoBehaviour
         listChatLoadText_All = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(textData.ToString()).chats);
 
         AddInGameText(0);
-
     }
 
     private void AddInGameText(int num)
