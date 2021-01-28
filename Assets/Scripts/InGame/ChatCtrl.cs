@@ -10,11 +10,11 @@ using System.Text;
 [Serializable]
 public struct ChatUnit
 {
+    public int scene_id;
     public int event_id;
     public int id;
     public string name;
     public string text;
-    public int sound;
 }
 
 [Serializable]
@@ -25,9 +25,7 @@ public struct ChatList
 
 public class ChatCtrl : MonoBehaviour
 {
-  
- 
-     [SerializeField]
+    [SerializeField]
     private Text chatText;
     [SerializeField]
     private Text characterName;
@@ -38,33 +36,31 @@ public class ChatCtrl : MonoBehaviour
     [SerializeField]
     private GameObject opponent;
     [SerializeField]
-    private GameObject chois;
-    [SerializeField]
-    private Text[] choiS_text;
+    private GameObject[] choiSObj;
 
 
     public List<ChatUnit> listChatLoadText_All = new List<ChatUnit>();
     private List<ChatUnit> listChatLoadText_InGame = new List<ChatUnit>();
-    
 
     private int chatCount = 0;
     private int countChack = 154;
+    private int indexScene_Id = 0;
+    private int indexEvent_id = 0;
     private bool AutoChack = false;
     private bool isCHOISing = false;
-    private int seCound = 0;
+    private Text[] choiS_text = new Text[3];
 
    
     private void Start()
     {
-     
         ChatLoad();
         opponent.SetActive(false);
-        chois.SetActive(false);
         chatText.text = string.Empty;
         characterName.text = string.Empty;
         for(int i = 0; i<3; i++)
         {
-            choiS_text[i].text = string.Empty;
+            choiS_text[i] = choiSObj[i].GetComponentInChildren<Text>();
+            choiSObj[i].SetActive(false);
         }
     }
 
@@ -74,17 +70,14 @@ public class ChatCtrl : MonoBehaviour
         {
             return;
         }
-     
-
-
     }
 
     #region 대사 출력
     public void ShowChat()
     {
         opponent.SetActive(true);
-        if (isCHOISing == true) { return; }
-        if (AutoChack == true) { return; }
+        if (isCHOISing) { return; }
+        if (AutoChack) { return; }
         if (countChack == chatCount)
         {
             chatText.DOKill(this);
@@ -93,11 +86,17 @@ public class ChatCtrl : MonoBehaviour
             return;
         }
         ChatAlgorithm();
-        SeSound();
     }
 
     private void ChatAlgorithm()
     {
+        if (listChatLoadText_InGame.Count <= chatCount)
+        {
+            listChatLoadText_InGame.Clear();
+            chatCount = 0;
+            indexScene_Id++;
+            AddInGameText(0, indexScene_Id);
+        }
         countChack = chatCount;
         if (listChatLoadText_InGame[chatCount].name.Contains("독백"))
         {
@@ -121,23 +120,42 @@ public class ChatCtrl : MonoBehaviour
     private void CHOISAlgorithm()
     {
         isCHOISing = true;
-        chois.SetActive(true);
         chatText.text = string.Empty;
         characterName.text = string.Empty;
-        for(int i = 0; i<3;i++)
+        listChatLoadText_InGame.Add(listChatLoadText_All[460]);
+        for (int i = 0; i<3;i++)
         {
-            choiS_text[i].text = listChatLoadText_InGame[chatCount + i].text;
+            if (!(listChatLoadText_InGame[chatCount + i].text.Contains("준비중입니다. (21-01-28 team.EVA)"))) //선택지 2개일때 오류남 근데 정상 작동함
+            {
+                choiSObj[i].SetActive(true);
+                choiS_text[i].text = listChatLoadText_InGame[chatCount + i].text;
+            }
+            else
+            {
+                choiSObj[i].SetActive(false);
+            }
         }
     }
 
     public void CHOIS(int num)
     {
         Debug.Log(num + "번 선택지");
-        chois.SetActive(false);
+        for (int i = 0; i < 3; i++)
+        {
+            choiSObj[i].SetActive(false);
+        }
         isCHOISing = false;
+        indexEvent_id++;
         chatCount = 0;
         listChatLoadText_InGame.Clear();
-        AddInGameText(num);
+        if (indexScene_Id.Equals(1) && indexEvent_id.Equals(3))
+        {
+            AddInGameText(num + 2, indexScene_Id);
+        }
+        else
+        {
+            AddInGameText(num, indexScene_Id);
+        }
         return;
     }
 
@@ -145,7 +163,7 @@ public class ChatCtrl : MonoBehaviour
     #region 오토
     public void Auto()
     {
-        if (AutoChack == true)
+        if (AutoChack) 
         {
             AutoChack = false;
             Debug.Log("오토 꺼짐");
@@ -166,29 +184,17 @@ public class ChatCtrl : MonoBehaviour
 
         listChatLoadText_All = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(textData.ToString()).chats);
 
-        AddInGameText(0);
-
+        AddInGameText(0,0);
     }
 
-    private void AddInGameText(int num)
+    private void AddInGameText(int event_id,int scene_id)
     {
         for (int i = 0; i < listChatLoadText_All.Count; i++)
         {
-            if (listChatLoadText_All[i].event_id.Equals(num))
+            if (listChatLoadText_All[i].event_id.Equals(event_id) && listChatLoadText_All[i].scene_id.Equals(scene_id))
             {
                 listChatLoadText_InGame.Add(listChatLoadText_All[i]);
             }
         }
-    }
-
-    public void SeSound() // 사운드 
-    {
-        seCound = countChack;
-        if (listChatLoadText_InGame[countChack].sound == 1)
-        {
-            SoundManager.Instance.sfxAudio[1].Play();
-        }
-       
-      
     }
 }
