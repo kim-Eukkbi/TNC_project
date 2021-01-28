@@ -14,6 +14,7 @@ public struct ChatUnit
     public int id;
     public string name;
     public string text;
+    public int sound;
 }
 
 [Serializable]
@@ -24,7 +25,9 @@ public struct ChatList
 
 public class ChatCtrl : MonoBehaviour
 {
-    [SerializeField]
+  
+ 
+     [SerializeField]
     private Text chatText;
     [SerializeField]
     private Text characterName;
@@ -42,15 +45,18 @@ public class ChatCtrl : MonoBehaviour
 
     public List<ChatUnit> listChatLoadText_All = new List<ChatUnit>();
     private List<ChatUnit> listChatLoadText_InGame = new List<ChatUnit>();
+    
 
     private int chatCount = 0;
     private int countChack = 154;
     private bool AutoChack = false;
     private bool isCHOISing = false;
+    private int seCound = 0;
 
    
     private void Start()
     {
+     
         ChatLoad();
         opponent.SetActive(false);
         chois.SetActive(false);
@@ -68,6 +74,9 @@ public class ChatCtrl : MonoBehaviour
         {
             return;
         }
+     
+
+
     }
 
     #region 대사 출력
@@ -84,6 +93,7 @@ public class ChatCtrl : MonoBehaviour
             return;
         }
         ChatAlgorithm();
+        SeSound();
     }
 
     private void ChatAlgorithm()
@@ -169,5 +179,16 @@ public class ChatCtrl : MonoBehaviour
                 listChatLoadText_InGame.Add(listChatLoadText_All[i]);
             }
         }
+    }
+
+    public void SeSound() // 사운드 
+    {
+        seCound = countChack;
+        if (listChatLoadText_InGame[countChack].sound == 1)
+        {
+            SoundManager.Instance.sfxAudio[1].Play();
+        }
+       
+      
     }
 }
