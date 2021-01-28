@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75aa52994dbab5440b7f285f0496984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterMain: {fileID: 349081945}
-  chatMain: {fileID: 662374068}
+  CharacterMain: {fileID: 349081945}
+  ChatMain: {fileID: 662374068}
   menuPanel: {fileID: 793815604}
 --- !u!1 &70970535
 GameObject:
@@ -1508,6 +1508,7 @@ Transform:
   - {fileID: 1298790877}
   - {fileID: 2129463454}
   - {fileID: 43349961}
+  - {fileID: 1144560381}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1525,7 +1526,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatPanel: {fileID: 662374068}
   scelectMain: {fileID: 349081945}
-  menuPanel: {fileID: 793815604}
 --- !u!114 &484806775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,7 +2189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &952534076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2761,12 +2761,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144560379}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.016083978, y: 2.6242716, z: 188.16382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 484806773}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298790875
 GameObject:
@@ -2964,12 +2964,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 43349962}
-        m_MethodName: Character
+        m_MethodName: CharacterSelect
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3168,12 +3168,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 43349962}
-        m_MethodName: Character
+        m_MethodName: CharacterSelect
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3233,7 +3233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1449969471
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3515,7 +3515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1539684915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4421,12 +4421,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 43349962}
-        m_MethodName: Character
+        m_MethodName: CharacterSelect
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5087,9 +5087,8 @@ MonoBehaviour:
   textDelay: 1
   autoDelay: 3
   opponent: {fileID: 292388034}
-  chois: {fileID: 114506954}
-  choiS_text:
-  - {fileID: 1603489336}
-  - {fileID: 1914536768}
-  - {fileID: 1483999813}
+  choiSObj:
+  - {fileID: 952534075}
+  - {fileID: 1449969470}
+  - {fileID: 1539684914}
   listChatLoadText_All: []

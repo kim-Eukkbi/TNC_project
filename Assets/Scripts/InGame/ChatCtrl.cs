@@ -10,6 +10,7 @@ using System.Text;
 [Serializable]
 public struct ChatUnit
 {
+    public int scene_id;
     public int event_id;
     public int id;
     public string name;
@@ -35,9 +36,7 @@ public class ChatCtrl : MonoBehaviour
     [SerializeField]
     private GameObject opponent;
     [SerializeField]
-    private GameObject chois;
-    [SerializeField]
-    private Text[] choiS_text;
+    private GameObject[] choiSObj;
 
 
     public List<ChatUnit> listChatLoadText_All = new List<ChatUnit>();
@@ -45,20 +44,22 @@ public class ChatCtrl : MonoBehaviour
 
     private int chatCount = 0;
     private int countChack = 154;
+    private int indexScene_Id = 0;
     private bool AutoChack = false;
     private bool isCHOISing = false;
+    private Text[] choiS_text = new Text[3];
 
    
     private void Start()
     {
         ChatLoad();
         opponent.SetActive(false);
-        chois.SetActive(false);
         chatText.text = string.Empty;
         characterName.text = string.Empty;
         for(int i = 0; i<3; i++)
         {
-            choiS_text[i].text = string.Empty;
+            choiS_text[i] = choiSObj[i].GetComponentInChildren<Text>();
+            choiSObj[i].SetActive(false);
         }
     }
 
@@ -88,6 +89,13 @@ public class ChatCtrl : MonoBehaviour
 
     private void ChatAlgorithm()
     {
+        if (listChatLoadText_InGame.Count <= chatCount)
+        {
+            listChatLoadText_InGame.Clear();
+            chatCount = 0;
+            indexScene_Id++;
+            AddInGameText(0, indexScene_Id);
+        }
         countChack = chatCount;
         if (listChatLoadText_InGame[chatCount].name.Contains("독백"))
         {
@@ -111,23 +119,33 @@ public class ChatCtrl : MonoBehaviour
     private void CHOISAlgorithm()
     {
         isCHOISing = true;
-        chois.SetActive(true);
         chatText.text = string.Empty;
         characterName.text = string.Empty;
         for(int i = 0; i<3;i++)
         {
-            choiS_text[i].text = listChatLoadText_InGame[chatCount + i].text;
+            if (!(listChatLoadText_InGame[chatCount + i].text.Equals(string.Empty))) //선택지 2개일때 오류남 근데 정상 작동함
+            {
+                choiSObj[i].SetActive(true);
+                choiS_text[i].text = listChatLoadText_InGame[chatCount + i].text;
+            }
+            else
+            {
+                choiSObj[i].SetActive(false);
+            }
         }
     }
 
     public void CHOIS(int num)
     {
         Debug.Log(num + "번 선택지");
-        chois.SetActive(false);
+        for (int i = 0; i < 3; i++)
+        {
+            choiSObj[i].SetActive(false);
+        }
         isCHOISing = false;
         chatCount = 0;
         listChatLoadText_InGame.Clear();
-        AddInGameText(num);
+        AddInGameText(num,indexScene_Id);
         return;
     }
 
@@ -156,14 +174,14 @@ public class ChatCtrl : MonoBehaviour
 
         listChatLoadText_All = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(textData.ToString()).chats);
 
-        AddInGameText(0);
+        AddInGameText(0,0);
     }
 
-    private void AddInGameText(int num)
+    private void AddInGameText(int event_id,int scene_id)
     {
         for (int i = 0; i < listChatLoadText_All.Count; i++)
         {
-            if (listChatLoadText_All[i].event_id.Equals(num))
+            if (listChatLoadText_All[i].event_id.Equals(event_id) && listChatLoadText_All[i].scene_id.Equals(scene_id))
             {
                 listChatLoadText_InGame.Add(listChatLoadText_All[i]);
             }
