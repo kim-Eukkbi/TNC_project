@@ -45,6 +45,7 @@ public class ChatCtrl : MonoBehaviour
     private int chatCount = 0;
     private int countChack = 154;
     private int indexScene_Id = 0;
+    private int indexEvent_id = 0;
     private bool AutoChack = false;
     private bool isCHOISing = false;
     private Text[] choiS_text = new Text[3];
@@ -121,9 +122,10 @@ public class ChatCtrl : MonoBehaviour
         isCHOISing = true;
         chatText.text = string.Empty;
         characterName.text = string.Empty;
-        for(int i = 0; i<3;i++)
+        listChatLoadText_InGame.Add(listChatLoadText_All[460]);
+        for (int i = 0; i<3;i++)
         {
-            if (!(listChatLoadText_InGame[chatCount + i].text.Equals(string.Empty))) //선택지 2개일때 오류남 근데 정상 작동함
+            if (!(listChatLoadText_InGame[chatCount + i].text.Contains("준비중입니다. (21-01-28 team.EVA)"))) //선택지 2개일때 오류남 근데 정상 작동함
             {
                 choiSObj[i].SetActive(true);
                 choiS_text[i].text = listChatLoadText_InGame[chatCount + i].text;
@@ -143,9 +145,17 @@ public class ChatCtrl : MonoBehaviour
             choiSObj[i].SetActive(false);
         }
         isCHOISing = false;
+        indexEvent_id++;
         chatCount = 0;
         listChatLoadText_InGame.Clear();
-        AddInGameText(num,indexScene_Id);
+        if (indexScene_Id.Equals(1) && indexEvent_id.Equals(3))
+        {
+            AddInGameText(num + 2, indexScene_Id);
+        }
+        else
+        {
+            AddInGameText(num, indexScene_Id);
+        }
         return;
     }
 

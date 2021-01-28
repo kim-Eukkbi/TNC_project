@@ -2322,7 +2322,7 @@
             "event_id": 0,
             "id": 332,
             "name": "일본인감독관",
-            "text": "오늘 출발하는 화물선인 이 배에 숨어서 간다면 나와 너는\n일본에 갈 수 있을 거야 그리고 너는  그곳에서 조선으로 가면 돼!,\n나와 같이 가겠니?"
+            "text": "오늘 출발하는 화물선인 이 배에 숨어서 간다면 나와 너는\n일본에 갈 수 있을 거야 그리고 너는  그곳에서 조선으로 가면 돼!, 나와 같이 가겠니?"
         },
         {
             "scene_id": 5,
@@ -2339,161 +2339,161 @@
             "text": "믿지 못하고 따라가지 않는다"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 335,
             "name": "일본인갱부",
             "text": "좋아, 내 이름은 ???다 이 배의 바닥에 너와 내가 들어갈 공간이 있다.\n그 곳에 숨어있어라, 이곳을 탈출하자"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 2,
             "id": 336,
             "name": "일본인갱부",
             "text": "날 믿지 못한점은 아쉽구나, 그렇다면 여기 계속 있거라.."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 337,
             "name": "독백",
             "text": "한결이와 일본인감시관은 나가사키까지 도착해서\n내릴 준비를 한다."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 338,
             "name": "일본인보급관1",
             "text": "물자 보급 받으러 왔습니다. "
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 339,
             "name": "일본인보급관2",
             "text": "보급일에 딱딱 시간까지 맞춰서 오고 말이야."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 340,
             "name": "일본인보급관2",
             "text": "자네는 너무 성실하고 착하단 말이야,\n매일 이렇게 일 하는게 안 힘든가?"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 341,
             "name": "일본인보급관1",
             "text": "하하, 아닙니다. 다, 천황님을 위한 거라고 생각하니,\n전혀 힘들지가 않습니다."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 342,
             "name": "일본인보급관2",
             "text": "이야… 천황님을 생각하는 마음이 하늘같군,\n아무튼 보급품을 넣어줄 테니."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 343,
             "name": "일본인보급관2",
             "text": "짐칸과 뱃바닥을 열게."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 344,
             "name": "일본인보급관1",
             "text": "예? 뱃바닥은 왜요?"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 345,
             "name": "일본인보급관2",
             "text": "하하, 자네 혼자 먹으라고 더 주는거잖아."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 346,
             "name": "일본인보급관1",
             "text": "와~ 감사합니다."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 347,
             "name": "독백",
             "text": "이윽고 뱃바닥이 열렸고, 보급관들의 눈동자에는\n텅 빈 뱃바닥이 아닌 ???와 한결이가 비쳤다."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 348,
             "name": "보급관들",
             "text": "너희는 뭐지?"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 349,
             "name": "???",
             "text": "제길…."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 350,
             "name": "독백",
             "text": "???가 일본인보급관1,2에게 달려들었다"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 351,
             "name": "???",
             "text": "어서 도망쳐서 숨어!!"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 352,
             "name": "???",
             "text": "항구 밖으로 가서 숨…!"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 353,
             "name": "독백",
             "text": "총성이 들렸다. 그리고 x의 말이 끊어지고,\nx의 머리에는 구멍이 뚫려 있었다."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 354,
             "name": "독백",
             "text": "보급관들은 x의 시체를 옆으로 치우고,\n한결이를 곤봉으로 매우 쳤다."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 355,
             "name": "보급관들",
             "text": "어딜 도망가려고해! 도망친 죗값으로 맞아 죽어라."
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 356,
             "name": "나",
             "text": "으아아악!"
         },
         {
-            "scene_id": 6,
+            "scene_id": 5,
             "event_id": 1,
             "id": 357,
             "name": "독백",
@@ -2501,724 +2501,731 @@
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 358,
             "name": "독백",
             "text": "석탄을 오늘의 할당량만큼 전부 다 캤다."
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 359,
             "name": "독백",
             "text": "하지만 할당량을 채웠다고 쉴 수도 없고 쉰다고 해도\n걸리면 맞고 말대꾸를 할 수도 없다."
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 360,
             "name": "독백",
             "text": "이러한 상황에 덥고 습하고 목도 메어온다. "
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 361,
             "name": "독백",
             "text": "점점 더 자신의 상황이 초라해 보이고\n더 이상의 희망이 없는 것 같다는 생각이 든다."
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 362,
             "name": "독백",
             "text": "지하 깊은 곳이라 그런지 가스 폭발은 흔한 일이다."
         },
         {
-            "scene_id": 6,
-            "event_id": 2,
+            "scene_id": 5,
+            "event_id": 0,
             "id": 363,
             "name": "선택",
             "text": "희망도 없는데 포기하고 가만히 서 있는다."
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 364,
             "name": "선택",
             "text": "여기서 억울하게 죽을 수는 없다. 폭발음이 들리자마자 도망간다."
         },
         {
             "scene_id": 6,
-            "event_id": 2,
+            "event_id": 0,
             "id": 365,
             "name": "선택",
             "text": "폭발 반경에서 벗어나는 것은 성공하였다. "
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 366,
             "name": "독백",
             "text": "가만히 서 있는 나의 모습을 본 주호가 와서 나를 밀친다. "
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 367,
             "name": "주호",
             "text": "너 미친거야?? 아무리 힘들어도 포기는 하면 안 되지"
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 368,
             "name": "주호",
             "text": "너 죽는 꼴을 본 나는 어쩌라고 이런거야!"
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 369,
             "name": "독백",
             "text": "한결은 순간적으로 놀란 감정과 여러 생각에 잠기며\n말문을 열지 못한다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 370,
             "name": "주호",
             "text": "너도 놀랐을 건데 말 심하게 해서 미안해.\n우리 힘들어도 좀만 더 버티자."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 371,
             "name": "한결",
             "text": "우리도 언젠가는 자유로워 질 수 있겠지?"
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 372,
             "name": "독백",
             "text": "주호가 대답을 하려는 순간 일본 간부들이 오며 상황은 정리 된다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 1,
             "id": 373,
             "name": "독백",
             "text": "대답을 듣지는 못하였지만 그 입모양은 분명 “응“ 이라고 한 것 같다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 2,
             "id": 374,
             "name": "[SYSTEM]",
             "text": "도망가는 순간 폭발에 의한 파편이 날라 와 생명력이 감소하였습니다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 3,
             "id": 375,
             "name": "독백",
             "text": "폭발 반경에서 벗어나 폭발 현장을 봤다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 3,
             "id": 376,
             "name": "독백",
             "text": "며칠 전 이야기를 나누었던 아저씨의 시체가 보였다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 3,
             "id": 377,
             "name": "독백",
             "text": "그 사이 정이 들었는지 눈물이 눈앞을 가린다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 3,
             "id": 378,
             "name": "독백",
             "text": "일본 간부들이 오며 상황은 정리 된다. "
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 3,
             "id": 379,
             "name": "독백",
             "text": "한 명이 죽었지만 아무 일 없었다는 듯이\n다시 모두들 자기 자리에 가 다시 석탄을 캔다."
         },
         {
-            "scene_id": 7,
+            "scene_id": 6,
             "event_id": 3,
             "id": 380,
             "name": "[SYSTEM]",
             "text": "이러한 모습을 본 한결의 정신력이 감소하였습니다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 381,
             "name": "독백",
             "text": "오늘은 일이 끝나고 씻고 자기까지 약간의 시간이 남았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 382,
             "name": "독백",
             "text": "하지만 여기에서 시간이 생겼다고 할 수 있는 일은\n멍 때리는 것 밖에 없다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 383,
             "name": "독백",
             "text": "오랜만에 바다를 보며 멍 때리고 있는데\n바다 위로 철새들이 무리 지어 날아간다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 384,
             "name": "독백",
             "text": "철새들을 본 한결은 혼자 생각한다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 385,
             "name": "독백",
             "text": "내가 이곳에서 나가 자유로워진다 해도\n다시 잡혀오기 전처럼 생활 할 수 있을까?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 386,
             "name": "독백",
             "text": "내가 다시 돌아간다 해도 저 뒤쳐진 한 마리의 철새처럼\n무리에 잘 섞이지 못하면 어쩌지?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 387,
             "name": "독백",
             "text": "새들을 보며 여러 가지 생각에 잠긴다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 388,
             "name": "독백",
             "text": "하지만 그러한 생각은 오래가지 못하였다. "
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 389,
             "name": "독백",
             "text": "일본 간부들이 자기 전 점오를 한다며 우리를 불러 모았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 390,
             "name": "독백",
             "text": "점오가 끝난 뒤 비좁은 곳에서 낑겨 자며\n자신의 처지를 다시 한 번 상기시킨다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 391,
             "name": "독백",
             "text": "8월 15일 저녁, 어떤 이유인지 모르겠지만\n일본 간부들이 하나, 둘 배를 타고 도망친다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 392,
             "name": "독백",
             "text": "일본 간부들은 전부 도망갔고\n이제 이 섬에는 조선인, 중국인, 일본 죄수들만 남았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 393,
             "name": "독백",
             "text": "몇몇 사람들은 자신의 나라가 독립한 것이라 확신했고\n사람들이 있는 곳을 뛰어 다니며 대한독립만세를 외쳤다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 394,
             "name": "독백",
             "text": "얼마 지나지 않아 조선인들은 모두 대한독립만세를 외쳤고\n중국인들은 뭐라 하는지 모르겠지만 우리와 같은 생각을 하는 것 같았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 395,
             "name": "독백",
             "text": "우리 모두는 축제 분위기였고 몇몇 사람들은 자신을 괴롭혔던\n일본 죄수들을 여럿이서 때리고 있었다. "
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 396,
             "name": "독백",
             "text": "주호가 한결에게 달려와 이제 진짜 우리도 자유라며 껴안았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 397,
             "name": "한결",
             "text": "우리가 자유가 된 건 좋은데 배는 벌써 다 타고 나갔고\n우리는 어떻게 나가?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 398,
             "name": "주호",
             "text": "너는 너무 미리 걱정해. 그런 걱정은 일단 우리 오늘을 즐기고 할까?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 399,
             "name": "한결",
             "text": "좋아. 대한독립만세!"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 400,
             "name": "독백",
             "text": "섬은 대한독립만세 소리로 가득 찼다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 401,
             "name": "독백",
             "text": "어찌저찌 섬에서 나와 육지에 도착했다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 402,
             "name": "독백",
             "text": "육지에 도착한 뒤 본 모습은 매우 처참했다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 403,
             "name": "주호",
             "text": "우리 조선인들이 여기까지 와서 전쟁을 해서 독립 한거야??"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 404,
             "name": "한결",
             "text": "이건 전쟁의 흔적이 아니야. \n우리 조선의 폭탄 제조 실력으로는 이렇게까지는…."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 405,
             "name": "주호",
             "text": "여기 무섭다. 왠지 으스스 해보여."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 406,
             "name": "독백",
             "text": "저 멀리 이상한 마스크(방독면)를 쓰고 있는 사람들이\n뭔가를 치우고 있는 것 같았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 407,
             "name": "독백",
             "text": "주호와 한결은 상황을 물어보기 위해 다가간다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 408,
             "name": "독백",
             "text": "주호는 아저씨의 등을 치며 말을 한다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 409,
             "name": "주호",
             "text": "아저씨이게 무슨.."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 410,
             "name": "독백",
             "text": "방독면을 쓰고 있던 아저씨는 기겁을 하며\n방독면 두 개를 건네며 말을 한다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 411,
             "name": "독백",
             "text": "주호와 한결은 아저씨의 말을 알아 들을 수 없었다.\n하지만 짐작은 할 수 있었다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 412,
             "name": "주호",
             "text": "뭔가 우리한테 이거 쓰고 도와 달라는 거 같지 않아?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 413,
             "name": "한결",
             "text": "응 우리가 도움이 될 수 있으면 도와주자!\n아무리 힘들어도 저 안보다는 쉽겠지."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 414,
             "name": "주호",
             "text": "그래"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 415,
             "name": "한결",
             "text": "분명 오늘 조국으로 돌아갈 수 있도록\n배 한 척을 준비해 준다고 했는데. 언제 오지"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 416,
             "name": "독백",
             "text": "한결은 배가 온다던 시간으로부터 한 시간을 더 기다렸지만\n배는 오지 않았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 417,
             "name": "독백",
             "text": "기상 조건 악화인지 어떤 이유인지 잘은 모르겠지만 한결은\n이제 이곳을 나갈 방법은 없다 생각해 절망에 빠진다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 418,
             "name": "독백",
             "text": "한결은 조선으로 돌아가는 큰 배를 타려고 했지만\n신원확인불가로 큰 배마저 놓치게 된다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 419,
             "name": "독백",
             "text": "이제 한결에게 남은 방법은 단 하나뿐이다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 420,
             "name": "독백",
             "text": "열심히 돈을 벌어 작은 어선을 타고 나가는 방법뿐이었다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 421,
             "name": "독백",
             "text": "언어가 다르고 배운 것도 없는 한결이 할 수 있는 일은 막노동뿐이었지만한결은 섬 안에서와 다르게 급여를 받고 일한다는 것만으로도 좋았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 422,
             "name": "독백",
             "text": "그렇게 몇 개월을 일해서 작은 어선을 타고 드디어 조국에 도착한다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 423,
             "name": "한결",
             "text": "이게 몇 년 만에 맡아보는 공기냐 너무 좋다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 424,
             "name": "독백",
             "text": "한결은 사람들이 조선 말로 대화를 하며 지나가는 것을 본다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 425,
             "name": "한결",
             "text": "진짜 우리 독립한거구나. 길에서 일본말이 아니라 조선말이 들린다니"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 426,
             "name": "독백",
             "text": "한결은 지나가던 한 행인을 붙잡고 물어본다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 427,
             "name": "한결",
             "text": "우리나라 진짜 독립 한거에요? 맞죠? 진짜죠?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 428,
             "name": "지나가던 행인",
             "text": "그렇지. 근데 어디 있었기에 이제야 이 소식을 접한 것이야?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 429,
             "name": "한결",
             "text": "일본에 강제징용 당해서 끌려갔었어요."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 430,
             "name": "지나가던 행인",
             "text": "이제 다시는 그런 일 없을 거야. 부모님도 보면 좋아하시겠다.\n얼른 가 봐"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 431,
             "name": "독백",
             "text": "한결은 이 날 독립 했다는 사실을 몸소 느끼고 더욱 더 행복했다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 432,
             "name": "독백",
             "text": "부모님을 뵙기 위해 고향으로 가는 길의 발걸음소리는\n더욱 더 경쾌했다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 433,
             "name": "독백",
             "text": "한결은 가벼운 발걸음으로 집에 도착했다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 434,
             "name": "한결",
             "text": "어머니 저 왔어요. 동생들이랑 잘 지내셨죠?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 435,
             "name": "독백",
             "text": "어머니는 아들의 목소리가 들리자 아픈 몸을 이끌고 방에서 나오셨다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 436,
             "name": "독백",
             "text": "어머니는 나를 보자마자 나를 껴안고 꽤 오랜 시간 울으셨다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 437,
             "name": "한결",
             "text": "어머니 편찮으셨던 거는 아직도 아프세요?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 438,
             "name": "어머니",
             "text": "너 끌려가고 너 걱정에 잠을 잘 수가 있어야지.\n내가 너 끌려간 날 얼마나 울었는지 모르겠어."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 439,
             "name": "한결",
             "text": "우리 어머니 걱정 시켜드려서 죄송해요.\n그래도 저 거기서 열심히 일 했는데 동생들이랑 끼니는 잘 챙겨 드셨죠?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 440,
             "name": "어머니",
             "text": "응 그래도 너 끌려가고 동네사람들이 많이들 도와주셔서\n동생들은 안 굶길 수 있었어."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 441,
             "name": "한결",
             "text": "그럼 일본 놈들한테는 매달 얼마나 받으셨기에\n도움을 받고 살고 계셨어요."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 442,
             "name": "어머니",
             "text": "돈 같은 거 받은 적이 없는데. 뭔 소리야? 그게"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 443,
             "name": "독백",
             "text": "한결은 고향에 혼자 남겨진 어머니가 한 푼도 못 받고 이웃에 기대\n살았다는 사실을 듣고 분노한다. 그런 한결을 어머니가 안아주며 말 한다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 444,
             "name": "어머니",
             "text": "돈 그런 거 필요 없어. 난 너가 살아 돌아온 거 하나만으로도 만족한다.\n우리 지금부터라도 행복하게 지내자. 알겠지?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 445,
             "name": "독백",
             "text": "한결은 어머니의 말에 울음을 참지 못하고 눈물을 흘린다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 446,
             "name": "한결",
             "text": "알겠어요. 어머니"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 447,
             "name": "어머니",
             "text": "아이구 내 새끼 왜 울어 우리 오늘은 맛난 거 먹자 알겠지."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 448,
             "name": "독백",
             "text": "한결은 마음 한 편에는 그 때의 아픔이 남아 있었지만\n가족들과 행복하게 살았다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 449,
             "name": "독백",
             "text": "70년은 꽤나 긴 세월이었다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 450,
             "name": "독백",
             "text": "한결은 한 가정의 가장으로 열심히 살았지만 아내는 몇 년 전 죽었고\n하나 있는 딸은 몇 개월 전 결혼해 자신의 가정을 꾸려나가는 중이였다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 451,
             "name": "독백",
             "text": "그렇게 한결은 혼자 집에서 TV를 보며 지내는 시간이 점점 더 많아졌다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 452,
             "name": "독백",
             "text": "어느 날은 채널을 돌려보던 중 군함도의 아픈 역사라는\n다큐가 진행 되고 있었다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 453,
             "name": "독백",
             "text": "한결은 70년도 더 된 일이지만 그 때의 고통을 아직도 잊지 못하고\n다큐를 보며 눈물을 흘렸다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 454,
             "name": "독백",
-            "text": "그로부터 며칠 뒤 뉴스를 보는데 군함도가 유네스코 세계문화 유산에\n등재 된다는 소식을 접하였고 뉴스 안에는 군함도를 자랑스러워하는\n일본인들의 인터뷰도 있었다."
+            "text": "그로부터 며칠 뒤 뉴스를 보는데 군함도가 유네스코 세계문화 유산에\n등재 된다는 소식을 접하였고 뉴스 안에는 군함도를 자랑스러워하는,일본인들의 인터뷰도 있었다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 455,
             "name": "독백",
             "text": "한결은 유네스코 세계문화 유산이 뭔지 궁금해서\n딸에게 전화해 물어 봤다."
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 456,
             "name": "한결",
             "text": "혹시 유네스코 세계문화 유산이 뭔지 아니?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 457,
             "name": "딸",
             "text": "그거? 세계 적으로 보존해야 된다고 해서 지정해 두는 거 일거야.\n그건 갑자기 왜?"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 458,
             "name": "한결",
             "text": "고맙다. 끊어 딸"
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 459,
             "name": "독백",
             "text": "한결은 강제징용 당했던 사람들을 잊은 채\n자랑스러워하는 모습을 보며 화가 치밀어 오르며 눈물을 흘린다. "
         },
         {
-            "scene_id": 8,
+            "scene_id": 7,
             "event_id": 0,
             "id": 460,
             "name": "독백",
             "text": "“저 섬이 저렇게 미화 되면 안 되는 거잖아“를 마음속에서 곱 씹어 보지만 한결이 할 수 있는 것은 없었다."
+        },
+        {
+            "scene_id": 8,
+            "event_id": 0,
+            "id": 461,
+            "name": "[SYSTEM]",
+            "text": "준비중입니다. (21-01-28 team.EVA)"
         }
     ]
-}
+}       
