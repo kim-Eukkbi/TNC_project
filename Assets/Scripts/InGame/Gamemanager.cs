@@ -28,4 +28,6 @@ public class Gamemanager : MonoBehaviour
         scelectMain.SetActive(true);
        // Screen.SetResolution(1440,2960, true);
     }
+
+    
 }
