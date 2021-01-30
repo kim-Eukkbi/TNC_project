@@ -55,7 +55,6 @@ public class ChatCtrl : MonoBehaviour
    
     private void Start()
     {
-        
         ChatLoad();
         opponent.SetActive(false);
         chatText.text = string.Empty;
@@ -66,18 +65,6 @@ public class ChatCtrl : MonoBehaviour
             choiSObj[i].SetActive(false);
         }
     }
-
-    private void Update()
-    {
-       
-        if(!this.gameObject.activeInHierarchy)
-        {
-          
-            return;
-        }
-       
-    }
-
     #region 대사 출력
     public void ShowChat()
     {
@@ -93,7 +80,6 @@ public class ChatCtrl : MonoBehaviour
             return;
         }
         ChatAlgorithm();
-       
     }
 
     private void ChatAlgorithm()
@@ -108,15 +94,17 @@ public class ChatCtrl : MonoBehaviour
         countChack = chatCount;
         if (listChatLoadText_InGame[chatCount].name.Contains("독백"))
         {
-           
             seSound();
             characterName.text = string.Empty;
         }
         else if (listChatLoadText_InGame[chatCount].name.Contains("[SYSTEM]"))
         {
-
             System();
-            
+            characterName.text = string.Empty;
+            chatText.text = string.Empty;
+            chatText.DOColor(Color.red, 0);
+            chatText.DOText(listChatLoadText_InGame[chatCount].text, textDelay).SetEase(Ease.Linear).OnComplete(() => {chatCount++;});
+            return;
         }
         else if (listChatLoadText_InGame[chatCount].name.Contains("선택"))
         {
@@ -127,8 +115,8 @@ public class ChatCtrl : MonoBehaviour
         {
             characterName.text = listChatLoadText_InGame[chatCount].name;
         }
-
         chatText.text = string.Empty;
+        chatText.DOColor(Color.white, 0);
         chatText.DOText(listChatLoadText_InGame[chatCount].text, textDelay).SetEase(Ease.Linear).OnComplete(() => { chatCount++; });
     }
     #endregion
@@ -138,7 +126,7 @@ public class ChatCtrl : MonoBehaviour
         isCHOISing = true;
         chatText.text = string.Empty;
         characterName.text = string.Empty;
-        listChatLoadText_InGame.Add(listChatLoadText_All[460]);
+        listChatLoadText_InGame.Add(listChatLoadText_All[259]);
         for (int i = 0; i<3;i++)
         {
             if (!(listChatLoadText_InGame[chatCount + i].text.Contains("준비중입니다. (21-01-28 team.EVA)"))) //선택지 2개일때 오류남 근데 정상 작동함
@@ -193,17 +181,82 @@ public class ChatCtrl : MonoBehaviour
         }
     }
     #endregion
-
+    #region 사운드&정신+체력
+    public void seSound()
+    {
+        switch(listChatLoadText_InGame[chatCount].sound)
+        {
+            case 7:
+                SoundManager.Instance.sfxAudio[7].Play(); //틀린 거 아님 
+                break;
+            case 1:
+                SoundManager.Instance.sfxAudio[1].Play();
+                break;
+            case 2:
+                SoundManager.Instance.sfxAudio[2].Play();
+                break;
+            case 3:
+                SoundManager.Instance.sfxAudio[3].Play();
+                break;
+            case 4:
+                SoundManager.Instance.sfxAudio[4].Play();
+                break;
+            case 5:
+                SoundManager.Instance.sfxAudio[5].Play();
+                break;
+            case 6:
+                SoundManager.Instance.sfxAudio[6].Play();
+                break;
+        }
+    }
+    public void System()
+    {
+        switch (listChatLoadText_InGame[chatCount].system_pm)
+        {
+            case 0://심장마비
+                Ability.Instance.heartattack(17.6f);
+                break;
+            case 1://철상
+                Ability.Instance.steel(8.8f);
+                break;
+            case 2://열상
+                Ability.Instance.abrasions(3.51f);
+                break;
+            case 3://찰과상
+                Ability.Instance.abrasions(3.51f);
+                break;
+            case 4://허기
+                Ability.Instance.hunger(2.1f);
+                break;
+            case 5://핍박
+                Ability.Instance.persecution(7.54f);
+                break;
+            case 6://증오
+                Ability.Instance.hatred(6.14f);
+                break;
+            case 7://혐오
+                Ability.Instance.disgust(4.74f);
+                break;
+            case 8://악의
+                Ability.Instance.malice(4.1f);
+                break;
+            case 9://짜증
+                Ability.Instance.irritation(3.62f);
+                break;
+        }
+    }
+    #endregion
+    #region JSON파싱
     public void ChatLoad() //JSON 파싱
     {
         TextAsset textData = Resources.Load("Json/ChatJson") as TextAsset;
 
         listChatLoadText_All = new List<ChatUnit>(JsonUtility.FromJson<ChatList>(textData.ToString()).chats);
 
-        AddInGameText(0,0);
+        AddInGameText(0, 0);
     }
 
-    private void AddInGameText(int event_id,int scene_id)
+    private void AddInGameText(int event_id, int scene_id)
     {
         for (int i = 0; i < listChatLoadText_All.Count; i++)
         {
@@ -213,97 +266,5 @@ public class ChatCtrl : MonoBehaviour
             }
         }
     }
-
-    public void seSound()
-    {
-
-        if (listChatLoadText_InGame[chatCount].sound.Equals(7)) //틀린 거 아님 
-        {
-            SoundManager.Instance.sfxAudio[7].Play();
-        }
-        if (listChatLoadText_InGame[chatCount].sound.Equals(1))
-        {
-            SoundManager.Instance.sfxAudio[1].Play();
-        }
-        if (listChatLoadText_InGame[chatCount].sound.Equals(2))
-        {
-            SoundManager.Instance.sfxAudio[2].Play();
-        }
-        if (listChatLoadText_InGame[chatCount].sound.Equals(3))
-        {
-            SoundManager.Instance.sfxAudio[3].Play();
-        }
-        if (listChatLoadText_InGame[chatCount].sound.Equals(4))
-        {
-            SoundManager.Instance.sfxAudio[4].Play();
-        }
-        if (listChatLoadText_InGame[chatCount].sound.Equals(5))
-        {
-            SoundManager.Instance.sfxAudio[5].Play();
-        }
-        if (listChatLoadText_InGame[chatCount].sound.Equals(6))
-        {
-            SoundManager.Instance.sfxAudio[6].Play();
-        }
-    }
-
-    public void System()
-    {
-        if(listChatLoadText_InGame[chatCount].system_pm.Equals(0)) //심장마비
-        {
-            Ability.Instance.heartattack(17.6f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(1)) //철상
-        {
-            Ability.Instance.steel(8.8f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(2)) //열상
-        {
-            Ability.Instance.laceration(5.3f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(3)) //찰과상
-        {
-            Ability.Instance.abrasions(3.51f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(4)) //허기
-        {
-            Ability.Instance.hunger(2.1f);
-        }
-
-
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(5))  //핍박
-        {
-            Ability.Instance.persecution(7.54f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(6)) //증오
-        { 
-            Ability.Instance.hatred(6.14f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(7)) //혐오
-        {
-            Ability.Instance.disgust(4.74f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(8)) //악의
-        {
-            Ability.Instance.malice(4.1f);
-        }
-
-        if (listChatLoadText_InGame[chatCount].system_pm.Equals(0)) //짜증
-        {
-            Ability.Instance.irritation(3.62f);
-        }
-
-
-
-
-
-    }
+    #endregion
 }
