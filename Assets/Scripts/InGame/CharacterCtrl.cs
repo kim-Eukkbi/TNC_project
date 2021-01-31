@@ -11,6 +11,17 @@ public class CharacterCtrl : MonoBehaviour
     [SerializeField]
     private GameObject menuPanel;
 
+    private void Update()
+    {
+        if(CharacterMain.activeInHierarchy)
+        {
+            menuPanel.SetActive(false);
+        }
+        else
+        {
+            menuPanel.SetActive(true);
+        }
+    }
     public void CharacterSelect(int num)
     {
         //TODO 나중에 애들 3명 나눠지면 그때 버튼마다 해당 캐릭으로 스토리 전환 하는거 만들어야함
