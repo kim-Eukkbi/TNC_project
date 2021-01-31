@@ -32,14 +32,17 @@ public class ChatCtrl : MonoBehaviour
     [SerializeField]
     private Text characterName;
     [SerializeField]
+    private GameObject fadeObj;
+    [SerializeField]
     private float textDelay;
     [SerializeField]
     private float autoDelay;
     [SerializeField]
     private GameObject opponent;
     [SerializeField]
+    private GameObject chat_main;
+    [SerializeField]
     private GameObject[] choiSObj;
-
 
     public List<ChatUnit> listChatLoadText_All = new List<ChatUnit>();
     private List<ChatUnit> listChatLoadText_InGame = new List<ChatUnit>();
@@ -50,16 +53,18 @@ public class ChatCtrl : MonoBehaviour
     private int indexEvent_id = 0;
     private bool AutoChack = false;
     private bool isCHOISing = false;
+    private Image fade_image = null;
     private Text[] choiS_text = new Text[3];
 
-   
+
     private void Start()
     {
         ChatLoad();
         opponent.SetActive(false);
         chatText.text = string.Empty;
         characterName.text = string.Empty;
-        for(int i = 0; i<3; i++)
+        fade_image = fadeObj.GetComponent<Image>();
+        for (int i = 0; i < 3; i++)
         {
             choiS_text[i] = choiSObj[i].GetComponentInChildren<Text>();
             choiSObj[i].SetActive(false);
@@ -68,7 +73,7 @@ public class ChatCtrl : MonoBehaviour
     #region 대사 출력
     public void ShowChat()
     {
-        
+        fadeObj.SetActive(false);
         opponent.SetActive(true);
         if (isCHOISing) { return; }
         if (AutoChack) { return; }
@@ -86,34 +91,27 @@ public class ChatCtrl : MonoBehaviour
     {
         if (listChatLoadText_InGame.Count <= chatCount)
         {
-            listChatLoadText_InGame.Clear();
-            chatCount = 0;
-            indexScene_Id++;
-            AddInGameText(0, indexScene_Id);
+            NextSceneLoad();
         }
         countChack = chatCount;
-        if (listChatLoadText_InGame[chatCount].name.Contains("독백"))
+        switch (listChatLoadText_InGame[chatCount].name)
         {
-            seSound();
-            characterName.text = string.Empty;
-        }
-        else if (listChatLoadText_InGame[chatCount].name.Contains("[SYSTEM]"))
-        {
-            System();
-            characterName.text = string.Empty;
-            chatText.text = string.Empty;
-            chatText.DOColor(Color.red, 0);
-            chatText.DOText(listChatLoadText_InGame[chatCount].text, textDelay).SetEase(Ease.Linear).OnComplete(() => {chatCount++;});
-            return;
-        }
-        else if (listChatLoadText_InGame[chatCount].name.Contains("선택"))
-        {
-            CHOISAlgorithm();
-            return;
-        }
-        else
-        {
-            characterName.text = listChatLoadText_InGame[chatCount].name;
+            case "독백":
+                seSound();
+                characterName.text = string.Empty;
+                break;
+            case "[SYSTEM]":
+                System();
+                return;
+            case "선택":
+                CHOISAlgorithm();
+                return;
+            case "편지":
+                Latter();
+                return;
+            default:
+                characterName.text = listChatLoadText_InGame[chatCount].name;
+                break;
         }
         chatText.text = string.Empty;
         chatText.DOColor(Color.white, 0);
@@ -127,7 +125,7 @@ public class ChatCtrl : MonoBehaviour
         chatText.text = string.Empty;
         characterName.text = string.Empty;
         listChatLoadText_InGame.Add(listChatLoadText_All[259]);
-        for (int i = 0; i<3;i++)
+        for (int i = 0; i < 3; i++)
         {
             if (!(listChatLoadText_InGame[chatCount + i].text.Contains("준비중입니다. (21-01-28 team.EVA)"))) //선택지 2개일때 오류남 근데 정상 작동함
             {
@@ -167,7 +165,7 @@ public class ChatCtrl : MonoBehaviour
     #region 오토
     public void Auto()
     {
-        if (AutoChack) 
+        if (AutoChack)
         {
             AutoChack = false;
             Debug.Log("오토 꺼짐");
@@ -181,10 +179,10 @@ public class ChatCtrl : MonoBehaviour
         }
     }
     #endregion
-    #region 사운드&정신+체력
+    #region 사운드&정신+체력 + ect
     public void seSound()
     {
-        switch(listChatLoadText_InGame[chatCount].sound)
+        switch (listChatLoadText_InGame[chatCount].sound)
         {
             case 7:
                 SoundManager.Instance.sfxAudio[7].Play(); //틀린 거 아님 
@@ -209,8 +207,14 @@ public class ChatCtrl : MonoBehaviour
                 break;
         }
     }
+
     public void System()
     {
+        characterName.text = string.Empty;
+        chatText.text = string.Empty;
+        chatText.DOColor(Color.red, 0);
+        chatText.DOText(listChatLoadText_InGame[chatCount].text, textDelay).SetEase(Ease.Linear).OnComplete(() => { chatCount++; });
+
         switch (listChatLoadText_InGame[chatCount].system_pm)
         {
             case 0://심장마비
@@ -220,7 +224,7 @@ public class ChatCtrl : MonoBehaviour
                 Ability.Instance.steel(8.8f);
                 break;
             case 2://열상
-                Ability.Instance.abrasions(3.51f);
+                Ability.Instance.laceration(5.3f);
                 break;
             case 3://찰과상
                 Ability.Instance.abrasions(3.51f);
@@ -244,6 +248,25 @@ public class ChatCtrl : MonoBehaviour
                 Ability.Instance.irritation(3.62f);
                 break;
         }
+    }
+
+    private void Latter()// 바뀔 수 있는 부분입니다 일단 보류
+    {
+        chatText.text = string.Empty;
+        chatText.DOColor(Color.black, 0);
+        chatText.DOText(listChatLoadText_InGame[chatCount].text, textDelay).SetEase(Ease.Linear).OnComplete(() => { chatCount++; });
+    }
+
+    private void NextSceneLoad()
+    {
+        chat_main.SetActive(false);
+        listChatLoadText_InGame.Clear();
+        chatCount = 0;
+        indexScene_Id++;
+        isCHOISing = true;
+        fadeObj.SetActive(true);
+        fade_image.DOFade(1, 1).OnComplete(() => { fade_image.DOFade(0, 1).OnComplete(() => { fadeObj.SetActive(false); isCHOISing = false; chat_main.SetActive(true); }); });
+        AddInGameText(0, indexScene_Id);
     }
     #endregion
     #region JSON파싱
